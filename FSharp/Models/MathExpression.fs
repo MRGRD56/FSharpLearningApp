@@ -49,8 +49,7 @@ type MathExpression(operand1: double, operand2: double, operator: MathOperator) 
         try
             (MathExpression.parse expressionString, true)
         with
-        | :? FormatException -> 
-            (null, false)
+        | :? FormatException -> (null, false)
 
     member public this.solve =
         match operator with
