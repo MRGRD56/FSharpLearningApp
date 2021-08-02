@@ -8,8 +8,14 @@ namespace CSharp
         private static void Main(string[] args)
         {
             var input = Console.ReadLine();
-            var expression = MathExpression.Parse(input);
-            Console.WriteLine($"{expression} = {expression.Solve()}");
+            if (MathExpression.TryParse(input, out var expression))
+            {
+                Console.WriteLine($"{expression} = {expression.Solve()}");
+            }
+            else
+            {
+                Console.WriteLine("Failed to parse the expression");
+            }
         }
     }
 }

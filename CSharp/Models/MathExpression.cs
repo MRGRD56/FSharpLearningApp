@@ -6,19 +6,11 @@ using System.Text.RegularExpressions;
 
 namespace CSharp.Models
 {
-    public class MathExpression
+    public record MathExpression(
+        double Operand1,
+        double Operand2,
+        MathOperator Operator)
     {
-        public double Operand1 { get; }
-        public double Operand2 { get; }
-        public MathOperator Operator { get; }
-
-        public MathExpression(double operand1, double operand2, MathOperator @operator)
-        {
-            Operand1 = operand1;
-            Operand2 = operand2;
-            Operator = @operator;
-        }
-
         public static MathExpression Parse(string expressionString)
         {
             var expressionMatch = Regex.Match(expressionString, @"^(\-?[\d,.]+)\s*([\+\-\*\/])\s*(\-?[\d,.]+)$");

@@ -1,16 +1,16 @@
 ﻿module FSharp.Program
 
 open System
-
-
-let getSum num1 num2 =
-    num1 + num2
-
-let isPositive number =
-    if number >= 0 then true else false //or just: number >= 0
+open FSharp.Models
 
 [<EntryPoint>]
-let main argv =
-    let result = getSum 2 5
-    printfn $"RESULT: {result}"
+let main args =
+    let input = Console.ReadLine()
+    let (expression, success) = MathExpression.tryParse input
+    let result = 
+        if success then
+            $"{expression} = {expression.solve}"
+        else 
+            "Failed to parse the expression"
+    printf "%s" result
     0
