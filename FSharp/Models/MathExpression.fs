@@ -2,11 +2,15 @@
 
 open System
 open System.Globalization
-open System.Linq
+open System.Linq;
 open System.Text.RegularExpressions
 
 [<AllowNullLiteral>]
 type MathExpression(operand1: double, operand2: double, operator: MathOperator) = class
+    member public this.operand1 with get() = operand1;
+    member public this.operand2 with get() = operand2;
+    member public this.operator with get() = operator;
+    
     static member private getParseException =
         FormatException("Failed to parse the expression")
 
@@ -37,10 +41,12 @@ type MathExpression(operand1: double, operand2: double, operator: MathOperator) 
     static member public parse expressionString =
         let expressionMatch = Regex.Match(expressionString, @"^(\-?[\d,.]+)\s*([\+\-\*\/])\s*(\-?[\d,.]+)$");
         let expressionMatchGroups = expressionMatch.Groups.Cast<Group>().ToArray();
-        if not expressionMatch.Success || expressionMatchGroups.Any(fun g -> not g.Success) 
+        if not expressionMatch.Success || expressionMatchGroups
+                                          |> Array.filter (fun g -> not g.Success)
+                                          |> Array.length > 0
         then raise MathExpression.getParseException else
-        let expressionParts = expressionMatchGroups.Select(fun g -> g.Value).ToArray();
-        new MathExpression(
+        let expressionParts = expressionMatchGroups |> Array.map (fun g -> g.Value);
+        MathExpression(
             MathExpression.parseOperand expressionParts.[1], 
             MathExpression.parseOperand expressionParts.[3],
             MathExpression.parseOperator expressionParts.[2]);
