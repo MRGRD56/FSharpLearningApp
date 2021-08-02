@@ -6,18 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df27f8d4-1409-421c-aa57-20c63daede93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FSharpLearningApp/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FSharpLearningApp/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FSharpLearningApp/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FSharpLearningApp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSharp/CSharp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSharp/Models/MathExpression.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSharp/Models/MathOperator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSharp/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FSharp/FSharp.fsproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FSharp/Program.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FSharpLearningApp.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FSharp/Models/MathExpression.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FSharpLearningApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FSharpLearningApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FSharp/FSharp.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/FSharp/FSharp.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FSharp/Program.fs" beforeDir="false" afterPath="$PROJECT_DIR$/FSharp/Program.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +35,9 @@
       <option value="$PROJECT_DIR$/CSharp/Models/MathOperator.cs" />
       <option value="$PROJECT_DIR$/CSharp/Program.cs" />
       <option value="$PROJECT_DIR$/CSharp/Models/MathExpression.cs" />
+      <option value="$PROJECT_DIR$/FSharp/Models/MathExpression.fs" />
+      <option value="$PROJECT_DIR$/FSharp/Program.fs" />
+      <option value="$PROJECT_DIR$/FSharp/FSharp.fsproj" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1wB0O4wlWHaH3rGHBMycmc7N8go" />
@@ -70,7 +65,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.CSharp">
+  <component name="RunManager" selected=".NET Project.FSharp">
     <configuration name="CSharp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -116,8 +111,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1627916663616</updated>
-      <workItem from="1627916754418" duration="3241000" />
+      <workItem from="1627916754418" duration="4780000" />
     </task>
+    <task id="LOCAL-00001" summary="complete C# app">
+      <created>1627920383123</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1627920383123</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,5 +142,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="complete C# app" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete C# app" />
   </component>
 </project>

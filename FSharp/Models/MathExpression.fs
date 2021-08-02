@@ -1,3 +1,3 @@
 ﻿namespace FSharp.Models
 
-type MathExpression
+//type MathExpression

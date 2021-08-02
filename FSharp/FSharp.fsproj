@@ -6,7 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Program.fs"/>
+        <Compile Include="Models\MathExpression.fs" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
 </Project>

@@ -1,13 +1,16 @@
-﻿// Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
+﻿module FSharp.Program
 
 open System
 
-// Define a function to construct a message to print
-let from whom =
-    sprintf "from %s" whom
+
+let getSum num1 num2 =
+    num1 + num2
+
+let isPositive number =
+    if number >= 0 then true else false //or just: number >= 0
 
 [<EntryPoint>]
 let main argv =
-    let message = from "F#" // Call the function
-    printfn "Hello world %s" message
-    0 // return an integer exit code
+    let result = getSum 2 5
+    printfn $"RESULT: {result}"
+    0
