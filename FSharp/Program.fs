@@ -6,7 +6,7 @@ open FSharp.Models
 [<EntryPoint>]
 let main args =
     let input = Console.ReadLine()
-    let (expression, success) = MathExpression.tryParse input
+    let expression, success = MathExpression.tryParse input
     let result = 
         if success then
             $"{expression} = {expression.solve}"

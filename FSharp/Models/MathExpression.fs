@@ -8,7 +8,7 @@ open System.Text.RegularExpressions
 [<AllowNullLiteral>]
 type MathExpression(operand1: double, operand2: double, operator: MathOperator) = class
     static member private getParseException =
-        new FormatException("Failed to parse the expression")
+        FormatException("Failed to parse the expression")
 
     static member private operatorStringDictionary = 
         dict [
@@ -20,13 +20,13 @@ type MathExpression(operand1: double, operand2: double, operator: MathOperator) 
 
     static member private parseOperand operandString =
         try
-            Double.Parse(operandString, new CultureInfo("en-US"))
+            Double.Parse(operandString, CultureInfo("en-US"))
         with
             | :? InvalidOperationException -> raise MathExpression.getParseException
 
     static member private parseOperator operatorString =
         try
-            MathExpression.operatorStringDictionary.First(fun x -> x.Value.Equals(operatorString)).Key
+            MathExpression.operatorStringDictionary.First(fun x -> x.Value = operatorString).Key
         with
             | :? InvalidOperationException -> raise MathExpression.getParseException
 
